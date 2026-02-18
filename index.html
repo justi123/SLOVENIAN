@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slovenia Student Arrival – 3 Day Checklist</title>
+
+<meta name="description" content="3-day arrival checklist for international students in Slovenia. University enrollment, tax number, bank account, student meals, transport, and jobs.">
+
+<style>
+@media (min-width: 901px) {
+  aside.card { position: sticky; top: 18px; height: fit-content; }
+}
+/* Gumroad Promo */
+.gumroadPromo{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:5px;
+  padding:18px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(77,163,255,.18), rgba(34,197,94,.12));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow)
+}
+@media(max-width:600px){
+  .gumroadPromo{grid-template-columns:1fr}
+}
+
+.gumroadImg img{
+  width:70%;
+  border-radius:20px;
+  border:1px solid var(--border);
+}
+
+.gumroadContent h3{
+  margin:0 0 8px;
+  font-size:20px;
+}
+
+.gumroadList{
+  margin:10px 0;
+  padding-left:18px;
+  font-size:13.5px;
+  color:var(--text)
+}
+.gumroadList li{margin-bottom:6px}
+
+.buyBtn{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ff7a18,#ffb347);
+  color:#1a1200;
+  font-weight:700;
+  text-decoration:none;
+  border:0;
+  box-shadow:0 10px 30px rgba(0,0,0,.35)
+}
+.buyBtn:hover{transform:translateY(-1px)}
+
+:root{
+  --bg:#070b14; --text:#eaf2ff; --muted:#9fb0cf;
+  --border:rgba(255,255,255,.12); --accent:#4da3ff;
+  --good:#22c55e; --warn:#ffcc66;
+  --surface:rgba(15,23,42,.9);
+  --surface2:rgba(255,255,255,.04);
+  --surface3:rgba(11,19,36,.6);
+  --shadow:0 16px 50px rgba(0,0,0,.45);
+}
+body[data-theme="light"]{
+  --bg:#f6f8ff; --text:#0a1020; --muted:#465a80;
+  --border:rgba(10,16,32,.15);
+  --surface:rgba(255,255,255,.95);
+  --surface2:rgba(10,16,32,.04);
+  --surface3:rgba(10,16,32,.05);
+  --shadow:0 16px 40px rgba(0,0,0,.1);
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
+.wrap{max-width:1200px;margin:auto;padding:18px 12px 50px}
+
+header{
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:16px;border-radius:18px;background:var(--surface);
+  border:1px solid var(--border);box-shadow:var(--shadow)
+}
+.brand h1{margin:0;font-size:18px}
+.brand p{margin:6px 0 0;color:var(--muted);font-size:13px}
+.actions{display:flex;gap:8px}
+.btn{
+  padding:9px 12px;border-radius:12px;
+  border:1px solid var(--border);background:var(--surface2);
+  color:var(--text);cursor:pointer;font-size:13px
+}
+.btn.primary{background:rgba(77,163,255,.18)}
+
+.grid{
+  display:grid;grid-template-columns:.75fr 1.25fr;
+  gap:14px;margin-top:14px
+}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:18px;padding:15px;box-shadow:var(--shadow)
+}
+.card h2{margin:0 0 10px;font-size:15px}
+.muted{color:var(--muted);font-size:13px}
+
+.progressBox{margin-top:12px;padding:12px;border-radius:16px;background:var(--surface2)}
+.meter{height:10px;border-radius:999px;background:rgba(255,255,255,.08)}
+.meter div{height:100%;width:0;background:var(--accent)}
+.row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+details.day{
+  margin-top:12px;border-radius:18px;
+  border:1px solid var(--border);background:var(--surface2)
+}
+summary{cursor:pointer;padding:14px;list-style:none}
+summary::-webkit-details-marker{display:none}
+.tag{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--border)}
+.tag.warn{color:var(--warn)} .tag.good{color:var(--good)}
+.dayBody{padding:0 14px 14px}
+
+.step{
+  margin-top:10px;padding:12px;border-radius:16px;
+  background:var(--surface3);border:1px solid var(--border)
+}
+.stepHead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.stepLeft{display:flex;gap:10px}
+.stepName{margin:0;font-weight:700;font-size:14px}
+.stepSub{margin:4px 0 0;font-size:12.5px;color:var(--muted)}
+
+.mapBtn{
+  padding:9px 12px;border-radius:12px;
+  background:rgba(77,163,255,.18);
+  border:1px solid rgba(77,163,255,.4);
+  text-decoration:none;color:var(--text);font-size:13px
+}
+
+.field{display:grid;gap:6px;margin-top:10px}
+.field label{font-size:12px;color:var(--muted)}
+.field input,.field select{
+  padding:10px;border-radius:12px;border:1px solid var(--border);
+  background:var(--surface2);color:var(--text)
+}
+
+footer{
+  margin-top:24px;padding:16px;text-align:center;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:18px;box-shadow:var(--shadow);
+  font-size:12.5px;color:var(--muted)
+}
+  /* ===== PRO UI ENHANCEMENTS (NON-DESTRUCTIVE) ===== */
+
+/* Smooth appearance */
+.card, .step, details.day, .gumroadPromo {
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.card:hover,
+.gumroadPromo:hover {
+  transform: translateY(-2px);
+}
+
+/* Steps hover clarity */
+.step:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(77,163,255,.10),
+    rgba(255,255,255,.03)
+  );
+}
+
+/* Better checkbox UX */
+.check {
+  width:18px;
+  height:18px;
+  accent-color: var(--accent);
+  cursor:pointer;
+}
+
+/* Details open animation */
+details.day[CLOSE] {
+  animation: openDay .35s ease;
+}
+@keyframes openDay {
+  from {opacity:0; transform:translateY(-6px)}
+  to {opacity:1; transform:none}
+}
+
+/* Sticky right card polish */
+aside.card {
+  backdrop-filter: blur(14px);
+}
+
+/* Mobile tap comfort */
+@media(max-width:600px){
+  .step {padding:14px}
+  .mapBtn {padding:11px 14px}
+}
+
+/* Subtle glow on progress */
+.meter div {
+  box-shadow: 0 0 18px rgba(77,163,255,.6);
+}
+</style>
+  
+
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">
+    <h1>🇸🇮 Slovenia Student Arrival – 3 Day Checklist</h1>
+    <p>Made by an international student, for international students</p>
+  </div>
+  <div class="actions">
+    <button class="btn primary" onclick="toggleTheme()">🌗 Theme</button>
+    <button class="btn" onclick="window.print()">🖨️ Print</button>
+    <button class="btn" onclick="resetAll()">♻️ Reset</button>
+  </div>
+</header>
+
+<div class="grid">
+
+<!-- LEFT PANEL -->
+<aside class="card">
+<h2>⚙️ Settings</h2>
+
+<div class="field">
+<label>City</label>
+<select id="preset" onchange="applyPreset()">
+<option value="maribor">Maribor</option>
+<option value="ljubljana">Ljubljana</option>
+</select>
+</div>
+
+<div class="field">
+<label>Your Starting Address</label>
+<input id="start" value="Mladinska ulica 7, 2000 Maribor">
+</div>
+
+<div style="margin-top:20px">
+<a class="mapBtn" href="https://goniyo.onelink.me/zKhp/i7aigl2k" target="_blank">
+📱 Free eSIM & Forex Card
+</a>
+</div>
+</aside>
+
+<!-- RIGHT CONTENT -->
+<section class="card">
+
+<h2>📊 Progress</h2>
+<div class="progressBox">
+  <div class="meter"><div id="bar"></div></div>
+  <div class="row"><span>Completed</span><span id="pct">0%</span></div>
+  <p class="muted" id="progressMsg" style="margin-top:8px;font-size:13px"></p>
+</div>
+
+<!-- DAY 1 -->
+<details class="day" >
+<summary><b>DAY 1 – University & City Setup</b> <span class="tag warn">Important</span></summary>
+<div class="dayBody">
+
+<div class="step">
+<div class="stepHead">
+<div class="stepLeft">
+<input type="checkbox" class="check">
+<div>
+<p class="stepName">University Enrollment</p>
+<p class="stepSub">Slovenia TRP CARD</p>
+</div>
+</div>
+<a class="mapBtn" id="uniBtn" target="_blank">Directions</a>
+</div>
+</div>
+
+<div class="step">
+<div class="stepHead">
+<div class="stepLeft">
+<input type="checkbox" class="check">
+<div>
+<p class="stepName">Študentski Boni</p>
+  <p class="stepSub">Install "Prehrana (student meal app) and register with TRP</p>
+</div>
+</div>
+<a class="mapBtn" id="boniBtn" target="_blank">Directions</a>
+</div>
+</div>
+
+<div class="step">
+<div class="stepHead">
+<div class="stepLeft">
+<input type="checkbox" class="check">
+<div>
+<p class="stepName">Buy Slovenia Sim Card</p>
+  <p class="stepSub">Budjet Sim should get from Supermarkets (Hot Maxi - budjet-friendly) </p>
+</div>
+</div>
+
+<div class="step">
+<div class="stepHead">
+<div class="stepLeft">
+<input type="checkbox" class="check">
+<div>
+<p class="stepName">ADDRESS REGISTERATION</p>
+<p class="stepSub">Rent agreement ,Student Entrolment,TRP</p>
+  <p class="stepSub">FOR LOCATION SEARCH "NEAR BY ministrstvo za finance" ON GOOGLE MAP</p>
+</div>
+</div>
+
+  
+<div class="step">
+<div class="stepHead">
+<div class="stepLeft">
+<input type="checkbox" class="check">
+<div>
+<p class="stepName">Bus Card</p>
+<p class="stepSub">Public transport card</p>
+</div>
+</div>
+<a class="mapBtn" id="busBtn" target="_blank">Directions</a>
+</div>
+</div>
+
+</div>
+</details>
+
+<!-- DAY 2 -->
+<details class="day">
+<summary><b>DAY 2 – Tax Number (FURS)</b> <span class="tag good">Required</span></summary>
+<div class="dayBody">
+<div class="step">
+<input type="checkbox" class="check">
+Apply for Tax Number (DR-02 form)
+<a class="mapBtn" id="fursBtn" target="_blank">Directions</a>
+</div>
+</div>
+</details>
+
+
+
+
+  
+<!-- DAY 3 -->
+<details class="day">
+<summary><b>DAY 3 – Bank & Student Work</b></summary>
+<div class="dayBody">
+<div class="step">
+<input type="checkbox" class="check">
+Open Bank Account
+<a class="mapBtn" id="bankBtn" target="_blank">Directions</a>
+</div>
+<div class="step">
+<input type="checkbox" class="check">
+Register at Študentski Servis
+<a class="mapBtn" id="jobBtn" target="_blank">Directions</a>
+</div>
+</div>
+</details>
+
+</section>
+</div>
+<div class="card" style="margin-top:16px">
+  <h2>🏠 Student Rooms & Accommodation Help</h2>
+  <p class="muted">
+    Looking for a student room or shared apartment in Slovenia?
+    I can connect you with trusted local agents.
+  </p>
+
+  <a class="buyBtn"
+     href="https://wa.me/38669859579?text=Hi%20Justin,%20I%20need%20help%20finding%20a%20student%20room%20in%20Slovenia.%20My%20budget%20and%20city%20are:"
+     target="_blank">
+     💬 Message on WhatsApp
+  </a>
+
+  <p class="muted" style="margin-top:10px;font-size:12px">
+    
+  </p>
+</div>
+
+  
+<!-- GUMROAD DOCUMENT PROMO -->
+<div class="gumroadPromo">
+
+  <div class="gumroadImg">
+    <img src="https://i.postimg.cc/7h9b4ZZ5/Chat-GPT-Image-Feb-1-2026-at-10-46-39-PM.png" 
+         alt="Slovenia Student Pre-Arrival Checklist PDF">
+  </div>
+
+  <div class="gumroadContent">
+    <h3>📘 Slovenia Student Pre-Arrival Checklist (PDF)</h3>
+    <p class="muted">
+      Moving to Slovenia? Don’t guess.  
+      This checklist is made by a student who already did everything.
+    </p>
+
+    <ul class="gumroadList">
+      <li>✅ Winter + Summer packing list</li>
+      <li>✅ Avoid overweight luggage & extra fees</li>
+      <li>✅ Documents you’ll ACTUALLY need</li>
+      <li>✅ Saves time, money & stress after landing</li>
+    </ul>
+
+    <a class="buyBtn"
+       href="https://justihere.gumroad.com/l/slovenia"
+       target="_blank">
+      🛒 Buy & Download PDF (Instant)
+    </a>
+
+    <p class="muted" style="margin-top:10px;font-size:14px">
+      One-time purchase • Instant access • Student-friendly
+    </p>
+  </div>
+
+</div>
+<footer> <div style="margin-bottom:10px"> <a href="contact.html" class="mapBtn">📩 Contact</a> <a href="privacy.html" class="mapBtn">🔒 Privacy</a> <a href="terms.html" class="mapBtn">📜 Terms</a> </div> <b>Created by Justin Johnson</b> </footer>
+
+</div>
+
+<script>
+
+  /* ===== PRO FEATURES ADD-ON ===== */
+
+// Motivational progress text
+const msg=document.getElementById("progressMsg");
+
+function updateMessage(pct){
+  if(pct===0) msg.innerText="Let’s start — Day 1 changes everything 🚀";
+  else if(pct<40) msg.innerText="Good start. Keep going 💪";
+  else if(pct<70) msg.innerText="You’re doing great — almost there 🔥";
+  else if(pct<100) msg.innerText="So close! Finish strong 🏁";
+  else msg.innerText="🎉 Arrival checklist completed. Welcome to Slovenia!";
+}
+
+// Extend existing update()
+const oldUpdate=update;
+update=function(){
+  oldUpdate();
+  const pct=parseInt(pctEl.innerText);
+  updateMessage(pct);
+};
+updateMessage(0);
+
+// Auto-open first incomplete day
+document.querySelectorAll("details.day").forEach(day=>{
+  const unchecked = day.querySelector(".check:not(:checked)");
+  if(unchecked && !document.querySelector("details.day[open]")){
+    day.open=true;
+  }
+});
+
+// EXPORT / IMPORT BACKUP (PRO FEATURE)
+function exportProgress(){
+  const data={};
+  checks.forEach((c,i)=>data["step"+i]=c.checked);
+  navigator.clipboard.writeText(JSON.stringify(data));
+  alert("Progress copied to clipboard ✅");
+}
+
+function importProgress(){
+  const raw=prompt("Paste your backup data:");
+  if(!raw) return;
+  try{
+    const data=JSON.parse(raw);
+    checks.forEach((c,i)=>{
+      c.checked=!!data["step"+i];
+      localStorage.setItem("step"+i,c.checked?"1":"0");
+    });
+    update();
+    alert("Progress restored 🎉");
+  }catch{
+    alert("Invalid backup data ❌");
+  }
+}
+
+const checks=[...document.querySelectorAll(".check")];
+const bar=document.getElementById("bar");
+const pctEl=document.getElementById("pct");
+
+checks.forEach((c,i)=>{
+  c.checked = localStorage.getItem("step"+i)==="1";
+  c.onchange=()=>{
+    localStorage.setItem("step"+i, c.checked?"1":"0");
+    update();
+  };
+});
+
+function update(){
+  const done=checks.filter(c=>c.checked).length;
+  const pct=Math.round(done/checks.length*100);
+  bar.style.width=pct+"%";
+  pctEl.innerText=pct+"%";
+}
+
+function resetAll(){
+  checks.forEach((c,i)=>{
+    c.checked=false;
+    localStorage.removeItem("step"+i);
+  });
+  update();
+}
+
+function toggleTheme(){
+  document.body.dataset.theme =
+    document.body.dataset.theme==="light"?"dark":"light";
+}
+
+function applyPreset(){
+  const start=encodeURIComponent(document.getElementById("start").value);
+
+  if(preset.value==="maribor"){
+    uniBtn.href=`https://www.google.com/maps/dir/${start}/Razlagova+ulica+14,+Maribor`;
+    boniBtn.href=`https://www.google.com/maps/dir/${start}/Gosposvetska+cesta+83,+Maribor`;
+    busBtn.href=`https://www.google.com/maps/dir/${start}/Mlinska+ulica+1,+Maribor`;
+    fursBtn.href=`https://www.google.com/maps/dir/${start}/Titova+cesta+10,+Maribor`;
+    bankBtn.href=`https://www.google.com/maps/dir/${start}/OTP+Banka+Maribor`;
+    jobBtn.href=`https://www.google.com/maps/dir/${start}/Študentski+Servis+Maribor`;
+    
+  }
+
+  if(preset.value==="ljubljana"){
+    uniBtn.href=`https://www.google.com/maps/dir/${start}/Kongresni+trg+12,+Ljubljana`;
+    boniBtn.href=`https://www.google.com/maps/dir/${start}/Dunajska+cesta+20,+Ljubljana`;
+    busBtn.href=`https://www.google.com/maps/dir/${start}/Slovenska+cesta+56,+Ljubljana`;
+    fursBtn.href=`https://www.google.com/maps/dir/${start}/Šmartinska+cesta+55,+Ljubljana`;
+    bankBtn.href=`https://www.google.com/maps/dir/${start}/OTP+Banka+Ljubljana`;
+    jobBtn.href=`https://www.google.com/maps/dir/${start}/Študentski+Servis+Ljubljana`;
+    
+  }
+}
+
+applyPreset();
+update();
+</script>
+
+</body>
+</html>
